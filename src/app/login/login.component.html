@@ -1,0 +1,59 @@
+
+
+<form #userForm="ngForm"  style="border: solid 2px aqua; background-color: rgba(37,62,63,0.7); padding: 20px;
+width: 400px;margin: 0 auto; text-align: center"  >
+  <label >Username:</label><br/>
+  <input type="text" placeholder="Your username..." id="Username" name="Username"  [(ngModel)]="username"
+         title="Hint: admin" #uvalue="ngModel" required class="form-control"><br/>
+  <div class="alert alert-danger"  *ngIf="!uvalue.valid  && uvalue.touched" >
+    <span *ngIf="!uvalue.valid"> Username is required</span>
+  </div>
+
+  <label>Password:</label><br/>
+  <input type="password" placeholder="Your password..." name="Password" [(ngModel)]="password" title="Hint: admin"
+         required #pvalue="ngModel" class="form-control"><br/>
+  <div class="alert alert-danger"  *ngIf="!pvalue.valid  && pvalue.touched" >
+    <span *ngIf="!pvalue.valid"> Password is required</span>
+  </div>
+  <label>Email:</label><br/>
+  <input type="email" placeholder="Your email..." name="Email" [(ngModel)]="email" title="Hint: admin@gmail.com"
+         required #evalue="ngModel" class="form-control"><br/>
+  <div class="alert alert-danger"  *ngIf="!evalue.valid  && evalue.touched" >
+    <span *ngIf="!evalue.valid"> Email is required</span>
+  </div>
+  <label>Optional:</label><br/>
+
+  <label>Male</label>
+  <input type="radio" name="sex" ngModel value="male">
+  <label>Female</label>
+  <input type="radio" name="sex" ngModel value="female">
+  <label>Other</label>
+  <input type="radio" name="sex" ngModel value="others"><br/>
+
+
+  <select name="Favorite_Language" ngModel>
+    <option>Java</option>
+    <option>C++</option>
+    <option>Python</option>
+  </select><br/>
+
+  <label>Agree the terms and conditions:
+    <input type="checkbox" class="checkbox" style="margin: auto">
+  </label><br/>
+
+
+  <button type="submit" (click)="Validation()" class="btn btn-success">Login</button>
+  <br/><br/>
+  <div align="center">
+    <button (click)="setinfo()" class="btn btn-primary" style="margin:5px;">AutoFill </button>
+    <button (click)="clearinfo()" class="btn btn-primary" style="margin:5px;">Clear </button>
+  </div>
+</form>
+
+<p>{{userForm.value|json}}</p>
+
+
+
+
+
+

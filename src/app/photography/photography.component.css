@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  border: 4px solid cyan;
+  background-color: rgba(74,76,78,0.8);
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 5px 5px 5px 3px #888888;
+}
+img{
+  width: 30%;
+  height:30%;
+  margin: 1.66% ;
+  /*float: left;*/
+}
+h2{
+  /*text-align: left;*/
+  border-radius: 25px;
+  border-bottom: cyan 1px solid;
+  margin: 0 70% auto 0;
+  padding: 20px;
+  background-color: rgba(75,75,75,0.7) ;
+
+}

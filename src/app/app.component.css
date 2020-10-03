@@ -1,0 +1,7 @@
+th{
+  border:  solid 1px black;
+}
+:host{
+  color: white;
+}
+

@@ -1,0 +1,50 @@
+<ng-marquee [stopOnHover]="true"  direction="alternate">
+<header >
+  <h1 align="center" class="btn-primary" style="background-image: url('assets/h2.png'); padding:30px 150px 30px 150px;
+  border: solid
+   1px
+  cadetblue;"
+      (click)="returnMain()">Welcom to my
+    Page</h1>
+</header>
+  </ng-marquee>
+
+<!--<nav align="center">-->
+<!--  <a routerLink="/login"> Login</a>-->
+<!--</nav>-->
+
+<router-outlet></router-outlet>
+
+<label>Type your Comment:</label>
+<form #comment="ngForm" >
+  <textarea name="contents" ngModel rows="4" cols="50"
+            style="border: aqua solid 1px;  background-color: rgba(74,76,78,0.8);"></textarea><br><br/>
+  <button type="submit" (click)="getAll(comment.value.contents)"  class="btn btn-success">Submit</button><br/><br/>
+</form>
+<!--<p>{{allComments|json}}</p>-->
+<br/>
+<label>Comment history</label>
+<table  align="center" class="table" >
+  <thead>
+    <tr style="background-color: rgba(50,100,83,0.7)">
+      <th>Comment ID</th>
+      <th>Comment content</th>
+      <th>Comment Date</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let item of allComments;index as i">
+    <tr style="background-color: darkgreen">
+      <td style="background-color: darkgreen">{{i}}</td>
+      <td style="background-color: cadetblue">{{item.context}}</td>
+      <td style="background-color: blueviolet">{{item.dateInfo}}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-info" (click)="clearAll()">Clear Comments</button>
+
+<footer>
+  <p>Author: Huanyu Zhang</p>
+  <p>This web was written by HTML+CSS+Angular</p>
+  <p><a href="https://gejing.huanyu.world">Huanyu's Blog(WordPress)</a></p>
+</footer>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "test-a48ed": {
+      "hosting": {
+        "Task2": [
+          "task2-b812c"
+        ]
+      }
+    }
+  }
+}

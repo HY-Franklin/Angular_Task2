@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  border: 4px solid cyan;
+  background-color: rgba(74,76,78,0.8);
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 5px 5px 5px 3px #888888;
+}
+
+p{
+  font-family: 'Crimson Text', serif;
+  color: white;
+}
+
+.quote{
+  border-left: 5px silver solid;
+}
+.Date{
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}

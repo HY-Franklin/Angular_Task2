@@ -1,0 +1,41 @@
+
+<!--<img src="assets/tour1.jpg" alt="Avatar" class="avatar">-->
+
+<div>
+  <button routerLink="/photography" class="btn btn-primary" style="margin: 0 10px auto">Photography</button>
+  <button routerLink="/blog" class="btn btn-primary">Blog</button>
+</div>
+
+<hr>
+<label style="background-color:rgba(0,100,100,0.7);padding: 10px;border-radius: 25px">Click to change color:</label>
+  <table id="t">
+    <tr>
+      <td [style]="'background-color:'+tdService.color1" (click)="tdService.getColor1()">1
+      </td>
+      <td [style]="'background-color:'+tdService.color2" (click)="tdService.getColor2()">2</td>
+      <td [style]="'background-color:'+tdService.color3" (click)="tdService.getColor3()">3</td>
+    </tr>
+    <tr>
+      <td [style]="'background-color:'+tdService.color4" (click)="tdService.getColor4()">4</td>
+      <td [style]="'background-color:'+tdService.color5" (click)="tdService.getColor5()">5</td>
+      <td [style]="'background-color:'+tdService.color6" (click)="tdService.getColor6()">6</td>
+    </tr>
+    <tr>
+      <td [style]="'background-color:'+tdService.color7" (click)="tdService.getColor7()">7</td>
+      <td [style]="'background-color:'+tdService.color8" (click)="tdService.getColor8()">8</td>
+      <td [style]="'background-color:'+tdService.color9" (click)="tdService.getColor9()">9</td>
+    </tr>
+  </table>
+<button type="button" class="btn btn-warning" (click)="tdService.clearAllColor()" style="margin: 10px">Reset
+  Color</button>
+<hr style="border: darkolivegreen 1px solid;width:50%;">
+<br/>
+
+<div>
+  <button (click)="isDisplay=!isDisplay" class="btn btn-warning">Toggle frame</button><br/>
+  <iframe style="overflow: hidden;"
+          src="https://www.arcgis.com/apps/opsdashboard/index.html#/409af567637846e3b5d4182fcd779bea" width="1000"
+          height="1000" scrolling="yes" *ngIf="!isDisplay">Iframes not supported</iframe>
+</div>
+
+
